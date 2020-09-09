@@ -1,0 +1,77 @@
+﻿<Window x:Class="EyeTrackingPageTurner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyeTrackingPageTurner"
+        mc:Ignorable="d"
+        Title="Turner" Height="608" Width="800" Closing="OnClosing" Loaded="OnLoaded">
+    <Grid Margin="0,0,0,1">
+        <Label Content="Turner" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="38" Width="381" FontSize="20"/>
+        <Label Content="The eye tracking page turner" HorizontalAlignment="Left" Margin="11,35,0,0" VerticalAlignment="Top" Width="319"/>
+        <ComboBox HorizontalAlignment="Left" Margin="172,205,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="349,204,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Left Side" HorizontalAlignment="Left" Margin="172,165,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Right Side" HorizontalAlignment="Left" Margin="349,164,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Key to press" HorizontalAlignment="Left" Margin="80,201,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Fixation Y Axis" HorizontalAlignment="Left" Margin="69,339,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="textboxFixationYLeft" HorizontalAlignment="Left" Height="23" Margin="172,366,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textboxFixationYRight" HorizontalAlignment="Left" Height="23" Margin="349,366,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Status" HorizontalAlignment="Left" Margin="408,45,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Fixation hold time (ms)" HorizontalAlignment="Left" Margin="17,113,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxStatus" HorizontalAlignment="Left" Height="22" Margin="467,49,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="297" IsEnabled="False">
+
+        </TextBox>
+        <TextBox x:Name="textBoxKeyPressStatus" HorizontalAlignment="Left" Height="22" Margin="467,71,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="textBoxTimeStatus" HorizontalAlignment="Left" Height="22" Margin="587,71,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="textBoxHoldTimeMs" HorizontalAlignment="Left" Height="22" Margin="172,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Slider HorizontalAlignment="Left" Margin="172,342,0,0" VerticalAlignment="Top" Width="120"/>
+        <Slider HorizontalAlignment="Left" Margin="349,339,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Width" HorizontalAlignment="Left" Margin="113,268,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <Slider x:Name="sliderLeftWidth" 
+                HorizontalAlignment="Left" 
+                Margin="172,271,0,0" 
+                VerticalAlignment="Top"
+                Width="120"
+                Value="{Binding LeftWidth, Mode=TwoWay}" 
+                Minimum="0"
+                Maximum="15"
+                TickPlacement="TopLeft" 
+                IsSnapToTickEnabled="True"/>
+
+        <Label x:Name="labelLeftWidth" 
+                 HorizontalAlignment="Left" 
+                 Height="23" 
+                 Margin="172,295,0,0" 
+                 HorizontalContentAlignment="Center"
+                 Content="{Binding ElementName=sliderLeftWidth, Path=Value}"
+                 VerticalAlignment="Top" 
+                 Width="120"/>
+
+        <Slider x:Name="sliderRightWidth" 
+                HorizontalAlignment="Left" 
+                Margin="349,268,0,0" 
+                VerticalAlignment="Top" 
+                Width="120"
+                Value="{Binding RightWidth, Mode=TwoWay}" 
+                Minimum="0"
+                Maximum="15"
+                TickPlacement="TopLeft" 
+                IsSnapToTickEnabled="True"/>
+        
+        <Label x:Name="labelRightWidth" 
+                 HorizontalAlignment="Left" 
+                 Height="23" 
+                 Margin="349,295,0,0"
+                 HorizontalContentAlignment="Center"
+                 Content="{Binding ElementName=sliderRightWidth, Path=Value}"
+                 VerticalAlignment="Top" 
+                 Width="120"/>
+
+        <Button x:Name="buttonApply" 
+                Margin="172,411,323,129"
+                Content="Apply"
+                Click="OnApplyButtonPressed"/>
+    </Grid>
+</Window>

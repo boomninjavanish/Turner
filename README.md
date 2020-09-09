@@ -1,6 +1,7 @@
 # Turner
 ## An eye tracking page turner for Windows.
 ![The Turner eye tracking page turning interface contains two red overlays on either side of the screen.](/turnerScreenshot.png)
+[Watch an early version of Turner in action](https://vimeo.com/456025047)
 
 Turner allows a pianist or other person whose limbs are encumbered to increment or decrement the page in a PDF reading application. The user's gaze is tracked using a Tobii Eye Tracker 4C via the Tobii Core SDK. If the user gazes at the overlay for a set amount of time, the application will press a virtual key that corresponds with a page turn for an ebook reader application. The ereader used for testing, [Drawboard PDF](https://www.drawboard.com), maps the left and right arrow keys to page turns. Therefore, this button mapping is hardcoded into the Turner application. Once the application is executed, it may be minimized or left running in the background while the ebook reading software is in focus.
 

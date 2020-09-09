@@ -8,7 +8,7 @@ Turner allows a pianist or other person whose limbs are encumbered to increment 
 The application allows for the width of the left and right gaze area overlays to be adjuastable. In addition, the amount of the time in which the user must gaze before a left or right key press is triggered may be modified.
 
 ##Download
-[Version 0.1](https://github.com/boomninjavanish/Turner/releases/tag/v0.1)
+[Version 0.1](https://github.com/boomninjavanish/Turner/releases/tag/v0.1-alpha)
 
 Right now, there is no installer for the application. However, this means that the application is portable; simply place the files in a directory of your choosing then execute the EyeTrackingPageTurner.exe file. Note that a Tobii Eye Tracker device is required along with the relevant drivers.
 
